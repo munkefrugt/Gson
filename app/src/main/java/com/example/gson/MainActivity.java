@@ -11,6 +11,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
@@ -69,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        listView = (ListView) findViewById(R.id.moovielist);
+        //listView = (ListView) findViewById(R.id.moovielist);
         // instatiate client.
         client = new AsyncHttpClient();
 
@@ -91,6 +92,14 @@ public class MainActivity extends AppCompatActivity {
 
                 Log.i("startAdress", startAdress);
 
+                // add the text Views, text Views dont show outside of this method, for some unknown reason.
+                TextView start = (TextView) findViewById(R.id.origin1);
+                TextView arrivalTime = (TextView) findViewById(R.id.arrivalTime1);
+                TextView destination = (TextView) findViewById(R.id.endLocation1);
+                start.setText(startAdress);
+                arrivalTime.setText(arrival_time);
+                destination.setText(endDestination);
+
             }
 
             @Override
@@ -99,7 +108,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         client2 = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
-
 
     }
 

@@ -47,7 +47,7 @@ public class Main2Activity extends AppCompatActivity {
 
             TextView start = (TextView) findViewById(R.id.origin);
             TextView arrivalTime = (TextView) findViewById(R.id.arrivalTime);
-            TextView destination = (TextView) findViewById(R.id.destination);
+            TextView destination = (TextView) findViewById(R.id.endLocation);
             start.setText(startAdress);
             arrivalTime.setText(arrival_time);
             destination.setText(endDestination);

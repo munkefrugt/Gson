@@ -17,7 +17,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="destination"
-        android:id="@+id/destination"
+        android:id="@+id/endLocation"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="54dp" />
@@ -29,7 +29,7 @@
         android:id="@+id/arrivalTime"
         android:text="arrival time"
         android:layout_centerVertical="true"
-        android:layout_alignStart="@+id/destination" />
+        android:layout_alignStart="@+id/endLocation" />
 
     <TextView
         android:layout_width="wrap_content"
