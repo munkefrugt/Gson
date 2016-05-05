@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
     ListView listView;
     Response responseObj;
-    CustomAdapter adapter;
+
     String origin = "valby st";
     String destination= "Dyssegård st";
 
@@ -90,8 +90,7 @@ public class MainActivity extends AppCompatActivity {
                 arrival_time = String.valueOf(responseObj.getRoutes().get(0).getLegs().get(0).getArrival_time().getValue());
 
                 Log.i("startAdress", startAdress);
-                //adapter = new CustomAdapter(MainActivity.this, responseObj.getRoutes());
-                //listView.setAdapter(adapter);
+
             }
 
             @Override
